@@ -1,0 +1,6 @@
+%li{"ng-repeat" => "item in items", "class" => "active"}
+  %ins{"class" => "icon {{item.cell_type | getIconClass}}"}
+  -#<-- -->
+  %span
+    {{item.name}}
+  %ul.tree{"ng-if"=>"item.children != ''", "ng-include" => "'phishing_creator/templates/partials/_treeview_checkbox_item.html'", :onload => "items = item.children"}
