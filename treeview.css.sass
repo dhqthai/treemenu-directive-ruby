@@ -1,0 +1,87 @@
+treeview
+  /* For treeview */
+  .treemenu
+    li
+      list-style: none
+    .toggler
+      cursor: pointer
+      &:before
+        display: inline-block
+        margin-right: 2pt
+        font-family: "fontAwesome"
+    .tree-empty
+      >
+        .toggler
+          opacity: 0.3
+          cursor: default
+
+          &:before
+            content: "\f147"
+    .tree-closed
+      >
+        .toggler
+          &:before
+            content: "\f196"
+    .tree-opened
+      >
+        .toggler
+          &:before
+            content: "\f147 "
+
+    ul.tree
+      list-style: none
+      margin: 0
+      padding: 0
+
+      ul
+        margin-left: 10px
+
+      li
+        margin: 0 5px
+        padding: 0
+        line-height: 20px
+        border-left: 1px dashed $light_grey
+
+        &:last-child
+          border-left: none
+
+          &:before
+            border-left: 1px dashed $light_grey
+
+        &:before
+          position: relative
+          top: -0.35em
+          height: 2em
+          width: 10px
+          border-bottom: 1px dashed $light_grey
+          content: ""
+          display: inline-block
+          left: 0
+
+    .icon
+      width: 30px
+      height: 22px
+      display: inline-block
+      margin-left: 0
+      margin-bottom: -2px
+
+    //.cluster-icon
+    //  background-image: url(/assets/icons-cell-switcher.png)
+    //  background-repeat: no-repeat
+    //  background-position: 0 0
+    //.company-icon
+    //  background-image: url(/assets/icons-cell-switcher.png)
+    //  background-repeat: no-repeat
+    //  background-position: 0 -26px
+    //.training-icon
+    //  background-image: url(/assets/icons-cell-switcher.png)
+    //  background-repeat: no-repeat
+    //  background-position: 0 -52px
+    //.test-icon
+    //  background-image: url(/assets/icons-cell-switcher.png)
+    //  background-repeat: no-repeat
+    //  background-position: 0 -82px
+    //.demonstration-icon
+    //  background-image: url(/assets/icons-cell-switcher.png)
+    //  background-repeat: no-repeat
+    //  background-position: 0 -111px
